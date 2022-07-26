@@ -19,6 +19,17 @@ body {
 	column-gap: 8px;
 	row-gap: 8px;
 	justify-content: center;
+	position: relative;
+}
+
+.main::after {
+	content: '';
+	position: absolute;
+	top: 37px;
+	left: 40px;
+	width: calc(100% - 80px);
+	height: 3px;
+	background: #EF3E33;
 }
 
 .item {
@@ -35,6 +46,22 @@ body {
 
 .item_big {
 	width: 676px;
+}
+
+.item_bestseller {
+	position: relative;
+}
+
+.item_bestseller:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 30px;
+	width: 90px;
+	height: 55px;
+	background-image: url("images/mark.png");
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .item_expensive {
@@ -69,13 +96,19 @@ body {
 	align-items: center;
 }
 
-.item__img:after {
-	content: "";
-	background-image: url("./images/bookmark.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
+.item__img > .item__img-mark {
+	position: absolute;
+	width: 100%;
+	max-width: 90px;
+	height: 55px;
+}
+
+.mark {
+ z-index: 1;
 	width: 68px;
 	height: 30px;
+
+
 }
 
 .item__img > img {
@@ -143,7 +176,7 @@ body {
 .item__text_decoration {
 	font-family: 'Manrope', sans-serif;
 	font-weight: 600;
-	color: #393E46;
+	color: red;
 	font-size: 14px;
 	line-height: 14px;
 	text-decoration: line-through;
