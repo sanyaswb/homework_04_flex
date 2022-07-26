@@ -6,7 +6,7 @@
 }
 
 body {
-	background: #F7F7F8;
+	background: #E5E5E5;
 }
 
 .main {
@@ -14,13 +14,15 @@ body {
 	max-width: 1440px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 40px;
 	flex-wrap: wrap;
 	column-gap: 8px;
 	row-gap: 8px;
+	justify-content: center;
 }
 
 .item {
+	background-color: white;
 	display: flex;
 	flex-direction: column;
 	height: 590px;
@@ -135,6 +137,25 @@ body {
 }
 
 @media screen and (max-width: 1439px) {
-	
+	.item_big {
+		width: 334px;
+	}
+}
+
+
+@media screen and (max-width: 1114px) {
+	.item {
+		width: 250px;
+	}
+
+	.item__content {
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 604px) {
+	.item {
+		width: 676px;
+	}
 }
 
